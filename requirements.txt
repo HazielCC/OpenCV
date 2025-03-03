@@ -1,0 +1,4 @@
+opencv-python~=4.11.0.86
+pyttsx3~=2.98
+deepface~=0.0.93
+rich~=13.9.4
