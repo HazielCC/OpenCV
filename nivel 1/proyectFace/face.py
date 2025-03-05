@@ -9,12 +9,15 @@ from proyectFace.utilities.files_utilities import DB_FILE
 
 
 class FaceRecognition:
+    """This class is used to recognize faces."""
+
     def __init__(self):
         self.engine = pyttsx3.init()
         self.db = DataBase()
         self.db.create_table()
 
     def saludar(self, mensaje):
+        """This method is used to greet the person."""
         self.engine.say("hola" + mensaje)
         self.engine.runAndWait()
 

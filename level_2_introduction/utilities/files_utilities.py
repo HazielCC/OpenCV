@@ -1,4 +1,4 @@
-# Archivos de Proyecto
+""" File Utilities Module. """
 import os
 
 CURRENT_DIRECTORY = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
@@ -7,6 +7,7 @@ DB_FILE = os.path.join(CURRENT_DIRECTORY, "db")
 
 
 def set_folder_root(folder):
+    """Set the folder root."""
     return os.path.join(CURRENT_DIRECTORY, folder)
 
 
