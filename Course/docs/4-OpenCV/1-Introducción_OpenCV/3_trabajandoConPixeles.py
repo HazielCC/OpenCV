@@ -5,42 +5,39 @@ Created on Tue Jul 20 20:14:03 2021
 @author: Jesus-Mtz
 """
 
-import cv2  
-import numpy as np
-
-imagenObscura = np.zeros((100,100,3), np.uint8) ##creamos una matríz numpy de 3 dimenciones y la rellenamos con ceros
-
-pixel = imagenObscura[97,97] ##Leemos el valor del pixel en la posición 97, 97, de la matríz en general, nos devolvera un vector de 3 elementos
-
-print(type(pixel)) ##mostramos en consola el valor contenido en ese pixel
-
-imagenObscura[97,97] = [255,255,255] ##remplazamos el valor del pixel de la posición 97, 97 por un pixel blanco
-
-
-##obtener los valores de cada pixel de la imagen:
-
-## obtenemos las dimenciones de la imagen creada, esto con shape. filas, columnas y canales
-alto, largo, _ = imagenObscura.shape
-
-##Recorremos la imagen imprimiendo los valores de cada pixel
-for i in range(largo):
-    for j in range(alto):
-        print(imagenObscura[i,j])
-        
-##Modificar los valores de cada pixel:
-for i in range(largo):
-    for j in range(alto):
-        pixel = imagenObscura[i,j]
-        if pixel[0] == 0 and pixel[1] == 0 and pixel[2] == 0:
-            imagenObscura[i,j] = [125,125,200]
-
-cv2.namedWindow("black",cv2.WINDOW_NORMAL)
-cv2.imshow("black", imagenObscura)
-
-cv2.waitKey()
-
-cv2.destroyAllWindows()
-
+# imagenObscura = np.zeros((100,100,3), np.uint8) ##creamos una matríz numpy de 3 dimenciones y la rellenamos con ceros
+#
+# pixel = imagenObscura[97,97] ##Leemos el valor del pixel en la posición 97, 97, de la matríz en general, nos devolvera un vector de 3 elementos
+#
+# print(type(pixel)) ##mostramos en consola el valor contenido en ese pixel
+#
+# imagenObscura[97,97] = [255,255,255] ##remplazamos el valor del pixel de la posición 97, 97 por un pixel blanco
+#
+#
+# ##obtener los valores de cada pixel de la imagen:
+#
+# ## obtenemos las dimenciones de la imagen creada, esto con shape. filas, columnas y canales
+# alto, largo, _ = imagenObscura.shape
+#
+# ##Recorremos la imagen imprimiendo los valores de cada pixel
+# for i in range(largo):
+#     for j in range(alto):
+#         print(imagenObscura[i,j])
+#
+# ##Modificar los valores de cada pixel:
+# for i in range(largo):
+#     for j in range(alto):
+#         pixel = imagenObscura[i,j]
+#         if pixel[0] == 0 and pixel[1] == 0 and pixel[2] == 0:
+#             imagenObscura[i,j] = [125,125,200]
+#
+# cv2.namedWindow("black",cv2.WINDOW_NORMAL)
+# cv2.imshow("black", imagenObscura)
+#
+# cv2.waitKey()
+#
+# cv2.destroyAllWindows()
+#
 
 
 # ##Leemos la imagen de entrada
@@ -80,7 +77,7 @@ cv2.destroyAllWindows()
 # cv2.destroyAllWindows()
 
 
-#Selección mediante mouse
+# Selección mediante mouse
 
 # # ##Leemos la imagen de entrada
 # img = cv2.imread("candados.jpg")
@@ -120,8 +117,8 @@ cv2.destroyAllWindows()
 
 
 # ##Remplazamos los fragmentos correspondientes a cada roi con su imagen contraria en la imagen copia
-# imgcopy[int(roi1[1]):int(roi1[1]+roi1[3]),int(roi1[0]):int(roi1[0]+roi1[2])] = newCandado2 
 # imgcopy[int(roi2[1]):int(roi2[1]+roi2[3]), int(roi2[0]):int(roi2[0]+roi2[2])] = newCandado1
+# imgcopy[int(roi1[1]):int(roi1[1]+roi1[3]),int(roi1[0]):int(roi1[0]+roi1[2])] = newCandado2
 
 
 # cv2.namedWindow("original",cv2.WINDOW_NORMAL)
@@ -146,13 +143,3 @@ cv2.destroyAllWindows()
 # cv2.waitKey()
 
 # cv2.destroyAllWindows()
-
-
-
-
-
-
-
-
-
-
