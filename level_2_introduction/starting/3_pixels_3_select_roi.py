@@ -1,13 +1,18 @@
 import cv2
 import numpy as np
 
-candado_1 = cv2.imread("../llave.jpeg")  # Se lee la imagen a color
-candado_2 = cv2.imread("../llave_oxidada.jpeg")  # Se lee la imagen a color
-alto, largo, canales = candado_1.shape  # Se obtienen las dimensiones de la imagen
+# Se obtiene la ruta del archivo actual
+llave_1 = cv2.imread(
+    "c:/CodeSpace/Python/OpenCV/level_2_introduction/starting/pixels_llave.jpeg"
+)  # Se lee la imagen a color
+llave_2 = cv2.imread(
+    "c:/CodeSpace/Python/OpenCV/level_2_introduction/starting/pixels_llave_oxidada.jpeg"
+)  # Se lee la imagen a color
+alto, largo, canales = llave_1.shape  # Se obtienen las dimensiones de la imagen
 
 # Se recorre la imagen
-candado1 = candado_1[0:alto, 0 : int(largo / 2)]
-candado2 = cv2.resize(candado_2[0:alto, int(largo / 2) :], (candado1.shape[1], alto))
+candado1 = llave_1[0:alto, 0 : int(largo / 2)]
+candado2 = cv2.resize(llave_2[0:alto, int(largo / 2) :], (candado1.shape[1], alto))
 
 # Unir las dos imágenes
 imagen_unida = np.zeros((int(alto), int(largo), int(canales)), np.uint8)
