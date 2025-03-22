@@ -4,10 +4,10 @@ import numpy as np
 
 # Se obtiene la ruta del archivo actual
 llave_1 = cv2.imread(
-    "c:/CodeSpace/Python/OpenCV/level_2_introduction/starting/pixels_llave.jpeg"
+    "/level_2_introduction/part-1/pixels_llave.jpeg"
 )  # Se lee la imagen a color
 llave_2 = cv2.imread(
-    "c:/CodeSpace/Python/OpenCV/level_2_introduction/starting/pixels_llave_oxidada.jpeg"
+    "/level_2_introduction/part-1/pixels_llave_oxidada.jpeg"
 )  # Se lee la imagen a color
 alto, largo, canales = llave_1.shape  # Se obtienen las dimensiones de la imagen
 
