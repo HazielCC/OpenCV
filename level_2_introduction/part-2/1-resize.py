@@ -1,9 +1,9 @@
 import cv2
 
-imagen = cv2.imread("pixels_llaves.jpg")
-imagen_traslalada = cv2.resize(imagen, (300, 300))  # Cambiar tamaño de la imagen
-alto, ancho, canales = imagen.shape  # Dimensiones
+image = cv2.imread("pixels_llaves.jpg")
+image_translated = cv2.resize(image, (300, 300))  # Cambiar tamaño de la imagen
+alto, ancho, canales = image.shape  # Dimensiones
 
 # * Mostrar imagen
-cv2.imshow("Imagen", imagen)
-cv2.imwrite("imagen_resized.jpg", imagen)  # Guardar imagen
+cv2.imshow("Imagen", image)
+cv2.imwrite("imagen_resized.jpg", image)  # Guardar imagen
