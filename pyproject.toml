@@ -1,0 +1,9 @@
+[project]
+name = "opencv"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.2.6",
+    "opencv-contrib-python>=4.11.0.86",
+]
