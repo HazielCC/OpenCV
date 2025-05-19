@@ -1,7 +1,7 @@
 import cv2
 
-img_1 = cv2.imread("happy_face.png")
-img_2 = cv2.imread("happy_face_no.png")
+img_1 = cv2.imread("../../assets/happy_face.png")
+img_2 = cv2.imread("../../assets/happy_face_no.png")
 
 img_1 = cv2.resize(img_1, (300, 300))
 img_2 = cv2.resize(img_2, (300, 300))

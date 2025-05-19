@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 t_matrix = np.array(([1, 1, 0], [0, 1, 0], [0, 1, 1]), np.int32) # Matriz de traslación
-image = cv2.imread("pixels_llaves.jpg") # Cargar imagen
+image = cv2.imread("../../assets/pixels_llaves.jpg")  # Cargar imagen
 
 height, width, channels = image.shape # Obtener dimensiones de la imagen
 # Crear imagen vacía para almacenar la trasladada

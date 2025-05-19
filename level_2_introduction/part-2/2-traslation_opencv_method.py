@@ -2,7 +2,7 @@ import cv2  # Importamos OpenCV para manipular imágenes
 import numpy as np  # Importamos NumPy para operaciones con matrices
 
 # *** Carga y redimensionamiento de la imagen ***
-image = cv2.imread("pixels_llaves.jpg")  # Se lee la imagen original desde un archivo
+image = cv2.imread("../../assets/pixels_llaves.jpg")  # Se lee la imagen original desde un archivo
 height, width, channels = (
     image.shape
 )  # Se obtienen las dimensiones originales de la imagen
