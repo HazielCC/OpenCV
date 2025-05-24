@@ -15,8 +15,7 @@ img_diff_gray = cv2.absdiff(cv2.cvtColor(img_1, cv2.COLOR_BGR2GRAY),
 _, img_diff_gray = cv2.threshold(img_diff_gray, 50, 255,
                                  cv2.THRESH_BINARY)  # Diferencia entre imágenes en escala de grises con umbral
 # * Diferencia entre imágenes en escala de grises con umbral y dilatación
-img_diff_gray = cv2.dilate(img_diff_gray, None,
-                           iterations=2)  # Diferencia entre imágenes en escala de grises con umbral y dilatación
+img_diff_gray = cv2.dilate(img_diff_gray, None, iterations=2)  # Diferencia entre imágenes en escala de grises con umbral y dilatación
 
 cv2.imshow("Diferencia", img_diff)  # Mostrar imagen
 cv2.imshow("Diferencia en escala de grises", img_diff_gray)  # Mostrar imagen
